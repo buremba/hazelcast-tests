@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/hazelcast-indexing-benchmark.iml" filepath="$PROJECT_DIR$/hazelcast-indexing-benchmark.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../hazelcast/hazelcast-wm/src/main/main.iml" filepath="$PROJECT_DIR$/../../../hazelcast/hazelcast-wm/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../hazelcast/hazelcast-build-utils/src/main/main1.iml" filepath="$PROJECT_DIR$/../../../hazelcast/hazelcast-build-utils/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../hazelcast/hazelcast-client/src/main/main2.iml" filepath="$PROJECT_DIR$/../../../hazelcast/hazelcast-client/src/main/main2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../hazelcast/hazelcast-hibernate/hazelcast-hibernate4/src/main/main3.iml" filepath="$PROJECT_DIR$/../../../hazelcast/hazelcast-hibernate/hazelcast-hibernate4/src/main/main3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../hazelcast/hazelcast-hibernate/hazelcast-hibernate3/src/main/main4.iml" filepath="$PROJECT_DIR$/../../../hazelcast/hazelcast-hibernate/hazelcast-hibernate3/src/main/main4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../hazelcast/hazelcast-spring/src/main/main5.iml" filepath="$PROJECT_DIR$/../../../hazelcast/hazelcast-spring/src/main/main5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../hazelcast/hazelcast-cloud/src/main/main6.iml" filepath="$PROJECT_DIR$/../../../hazelcast/hazelcast-cloud/src/main/main6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../hazelcast/hazelcast-all/src/main/main7.iml" filepath="$PROJECT_DIR$/../../../hazelcast/hazelcast-all/src/main/main7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../hazelcast/hazelcast/src/main/main8.iml" filepath="$PROJECT_DIR$/../../../hazelcast/hazelcast/src/main/main8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../hazelcast/hazelcast-ra/hazelcast-jca/src/main/main9.iml" filepath="$PROJECT_DIR$/../../../hazelcast/hazelcast-ra/hazelcast-jca/src/main/main9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../hazelcast/hazelcast-spring/src/test/test.iml" filepath="$PROJECT_DIR$/../../../hazelcast/hazelcast-spring/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../hazelcast/hazelcast-hibernate/hazelcast-hibernate4/src/test/test1.iml" filepath="$PROJECT_DIR$/../../../hazelcast/hazelcast-hibernate/hazelcast-hibernate4/src/test/test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../hazelcast/hazelcast-ra/hazelcast-jca/src/test/test2.iml" filepath="$PROJECT_DIR$/../../../hazelcast/hazelcast-ra/hazelcast-jca/src/test/test2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../hazelcast/hazelcast-client/src/test/test3.iml" filepath="$PROJECT_DIR$/../../../hazelcast/hazelcast-client/src/test/test3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../hazelcast/hazelcast-cloud/src/test/test4.iml" filepath="$PROJECT_DIR$/../../../hazelcast/hazelcast-cloud/src/test/test4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../hazelcast/hazelcast/src/test/test5.iml" filepath="$PROJECT_DIR$/../../../hazelcast/hazelcast/src/test/test5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../hazelcast/hazelcast-wm/src/test/test6.iml" filepath="$PROJECT_DIR$/../../../hazelcast/hazelcast-wm/src/test/test6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../hazelcast/hazelcast-hibernate/hazelcast-hibernate3/src/test/test7.iml" filepath="$PROJECT_DIR$/../../../hazelcast/hazelcast-hibernate/hazelcast-hibernate3/src/test/test7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../hazelcast/hazelcast-build-utils/src/test/test8.iml" filepath="$PROJECT_DIR$/../../../hazelcast/hazelcast-build-utils/src/test/test8.iml" />
+    </modules>
+  </component>
+</project>
+
