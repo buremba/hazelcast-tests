@@ -23,6 +23,8 @@ public class Client {
         HazelcastInstance hz = Hazelcast.newHazelcastInstance();
         qs_map = hz.getMap("quicksearch");
 
+        System.out.println("Number of indexes: "+hz.getConfig().getMapConfig("quicksearch").getMapIndexConfigs().size());
+
         int i = args.length > 0 ? Integer.parseInt(args[0]) : 150000;
         populateWithFactory(i);
 
