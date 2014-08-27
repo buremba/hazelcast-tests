@@ -1,6 +1,7 @@
 package com.craftedbytes.client;
 
 import com.craftedbytes.domain.QuickSearch;
+import com.craftedbytes.utils.PredicateUtil;
 import com.craftedbytes.utils.QueryUtils;
 import com.craftedbytes.utils.QuickSearchFactory;
 import com.hazelcast.core.Hazelcast;
@@ -29,65 +30,67 @@ public class Client {
         populateWithFactory(i);
 
         EntryObject eo = new PredicateBuilder().getEntryObject();
+        runIMapSQLBasedQuery(10, PredicateUtil.mediumComplexQuery(), 15);
 
-        runIMapSQLBasedQuery(10,
-                eo.isNot("disabled_for_upload")
-                        .and(eo.get("media_id").notEqual(-1)), 2);
-
-
-        runIMapSQLBasedQuery(10, eo.isNot("disabled_for_upload")
-                .and(eo.get("media_id").notEqual(-1))
-                .and(eo.isNot("inactive"))
-                .and(eo.get("quality_check_state").equal(12)), 4);
-
-
-        PredicateBuilder p8 = eo.isNot("disabled_for_upload")
-                .and(eo.get("media_id").notEqual(-1))
-                .and(eo.isNot("inactive"))
-                .and(eo.get("quality_check_state").equal(12))
-                .and(eo.get("proxy_creation_state").equal(14))
-                .and(eo.get("content_approval_media_state").notEqual(18))
-                .and(eo.get("clock_approval_media_state").notEqual(42))
-                .and(eo.get("class_approval_media_state").notEqual(72))
-                .and(eo.get("num_instruction_rejected").equal(0));
-
-        runIMapSQLBasedQuery(10, p8, 8);
-
-        runIMapSQLBasedQuery(10, eo.isNot("disabled_for_upload")
-                .and(eo.get("media_id").notEqual(-1))
-                .and(eo.isNot("inactive"))
-                .and(eo.get("quality_check_state").equal(12))
-                .and(eo.get("proxy_creation_state").equal(14))
-                .and(eo.get("content_approval_media_state").notEqual(18))
-                .and(eo.get("clock_approval_media_state").notEqual(42))
-                .and(eo.get("class_approval_media_state").notEqual(72))
-                .and(eo.get("num_instruction_rejected").equal(0))
-                .and(eo.get("qc_approval_media_state").notEqual(22))
-                .and(eo.get("approval_advert_state").notEqual(11))
-                .and(eo.isNot("aired"))
-                .and(eo.get("approval_advert_state").in(9, 10)), 13);
-
-        PredicateBuilder p17 = eo.isNot("disabled_for_upload")
-                .and(
-                        eo.get("approval_advert_state").equal(11)
-                                .or(
-                                        eo.isNot("inactive")
-                                                .and(
-                                                        eo.get("content_approval_media_state").equal(18)
-                                                                .or(eo.get("clock_approval_media_state").equal(42))
-                                                                .or(eo.get("qc_approval_media_state").equal(22))
-                                                                .or(eo.get("num_instruction_rejected").greaterThan(0))
-                                                )
-                                )
-                )
-                .and(eo.get("first_air_date").notEqual(0)
-                        .and(eo.get("delivery_deadline_ms_algo").greaterThan(1403560800000l)
-                                .or(eo.get("first_air_date").equal(0))
-                                .or(eo.get("delivery_deadline_ms_algo").lessThan(0).and(eo.get("first_air_date").greaterThan(1403560800000l)))));
-
-        runIMapSQLBasedQuery(10, p17, 17);
-
-        runIMapSQLBasedQuery(10, p17.or(p8), 25);
+//
+//        runIMapSQLBasedQuery(10,
+//                eo.isNot("disabled_for_upload")
+//                        .and(eo.get("media_id").notEqual(-1)), 2);
+//
+//
+//        runIMapSQLBasedQuery(10, eo.isNot("disabled_for_upload")
+//                .and(eo.get("media_id").notEqual(-1))
+//                .and(eo.isNot("inactive"))
+//                .and(eo.get("quality_check_state").equal(12)), 4);
+//
+//
+//        PredicateBuilder p8 = eo.isNot("disabled_for_upload")
+//                .and(eo.get("media_id").notEqual(-1))
+//                .and(eo.isNot("inactive"))
+//                .and(eo.get("quality_check_state").equal(12))
+//                .and(eo.get("proxy_creation_state").equal(14))
+//                .and(eo.get("content_approval_media_state").notEqual(18))
+//                .and(eo.get("clock_approval_media_state").notEqual(42))
+//                .and(eo.get("class_approval_media_state").notEqual(72))
+//                .and(eo.get("num_instruction_rejected").equal(0));
+//
+//        runIMapSQLBasedQuery(10, p8, 8);
+//
+//        runIMapSQLBasedQuery(10, eo.isNot("disabled_for_upload")
+//                .and(eo.get("media_id").notEqual(-1))
+//                .and(eo.isNot("inactive"))
+//                .and(eo.get("quality_check_state").equal(12))
+//                .and(eo.get("proxy_creation_state").equal(14))
+//                .and(eo.get("content_approval_media_state").notEqual(18))
+//                .and(eo.get("clock_approval_media_state").notEqual(42))
+//                .and(eo.get("class_approval_media_state").notEqual(72))
+//                .and(eo.get("num_instruction_rejected").equal(0))
+//                .and(eo.get("qc_approval_media_state").notEqual(22))
+//                .and(eo.get("approval_advert_state").notEqual(11))
+//                .and(eo.isNot("aired"))
+//                .and(eo.get("approval_advert_state").in(9, 10)), 13);
+//
+//        PredicateBuilder p17 = eo.isNot("disabled_for_upload")
+//                .and(
+//                        eo.get("approval_advert_state").equal(11)
+//                                .or(
+//                                        eo.isNot("inactive")
+//                                                .and(
+//                                                        eo.get("content_approval_media_state").equal(18)
+//                                                                .or(eo.get("clock_approval_media_state").equal(42))
+//                                                                .or(eo.get("qc_approval_media_state").equal(22))
+//                                                                .or(eo.get("num_instruction_rejected").greaterThan(0))
+//                                                )
+//                                )
+//                )
+//                .and(eo.get("first_air_date").notEqual(0)
+//                        .and(eo.get("delivery_deadline_ms_algo").greaterThan(1403560800000l)
+//                                .or(eo.get("first_air_date").equal(0))
+//                                .or(eo.get("delivery_deadline_ms_algo").lessThan(0).and(eo.get("first_air_date").greaterThan(1403560800000l)))));
+//
+//        runIMapSQLBasedQuery(10, p17, 17);
+//
+//        runIMapSQLBasedQuery(10, p17.or(p8), 25);
     }
 
 
