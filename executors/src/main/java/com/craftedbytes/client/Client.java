@@ -22,7 +22,7 @@ public class Client {
             throws IOException, ExecutionException, InterruptedException {
         HazelcastInstance hz = Hazelcast.newHazelcastInstance();
         qs_map = hz.getMap("quicksearch");
-        
+
         int i = args.length > 0 ? Integer.parseInt(args[0]) : 150000;
         populateWithFactory(i);
 
