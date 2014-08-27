@@ -66,9 +66,9 @@
     </executor-service>
 
     <map name="quicksearch">
-        <read-backup-data>true</read-backup-data>
-        <in-memory-format>BINARY</in-memory-format>
-        <backup-count>1</backup-count>
+        <!--<read-backup-data>true</read-backup-data>-->
+        <!--<in-memory-format>BINARY</in-memory-format>-->
+        <!--<backup-count>1</backup-count>-->
         <!--<indexes>-->
             <!--<index ordered="true">media_content_approval_instruction</index>-->
             <!--<index ordered="true">media_clock_approval_instruction</index>-->
